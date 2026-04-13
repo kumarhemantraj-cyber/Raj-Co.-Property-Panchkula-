@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj & Co Properties</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>Raj & Co</h2>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#properties">Properties</a>
+<a href="#contact">Contact</a>
+<a href="#add-property">Add Property</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<h1>Discover Premium Properties in Panchkula</h1>
+<p>Your Trusted Real Estate Partner for Residential & Commercial Deals</p>
+<a href="#contact"><button class="btn">Get in Touch</button></a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Raj & Co Properties</h2>
+
+<p class="big-text">
+Raj & Co Properties is a trusted real estate consultancy based in Panchkula, offering a wide range of property solutions across residential, commercial, and industrial segments. 
+With years of experience in the property market, we focus on delivering genuine deals, transparent transactions, and the best value for our clients.
+</p>
+
+<div class="grid">
+
+<div class="card"><div class="card-body">
+<h3>🏠 Residential Houses</h3>
+<p>
+We deal in premium residential houses ranging from 2 Marla to 5 Kanal. Our properties are located in well-developed sectors with modern infrastructure, making them ideal for comfortable family living.
+</p>
+</div></div>
+
+<div class="card"><div class="card-body">
+<h3>📍 Residential Plots</h3>
+<p>
+We provide verified residential plots with clear titles, ensuring safe investments. Whether you are planning to build your dream home or invest for future growth, we offer the best options.
+</p>
+</div></div>
+
+<div class="card"><div class="card-body">
+<h3>🏢 Commercial Properties</h3>
+<p>
+Our commercial portfolio includes shops, showrooms, and commercial plots in high-demand areas, ensuring maximum visibility and strong return on investment.
+</p>
+</div></div>
+
+<div class="card"><div class="card-body">
+<h3>🏬 SCO / Booth / Industrial</h3>
+<p>
+We specialize in SCOs, booths, and industrial sheds for business and manufacturing needs, located in prime commercial zones.
+</p>
+</div></div>
+
+<div class="card"><div class="card-body">
+<h3>🌾 Agricultural Land</h3>
+<p>
+We also deal in agricultural land and farmhouses suitable for long-term investment, farming, and peaceful living away from city noise.
+</p>
+</div></div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+
+<div class="grid">
+
+<div class="card"><div class="card-body">
+<h3>Property Buying</h3>
+<p>We help you find the best property based on your budget, location preference, and future investment value.</p>
+</div></div>
+
+<div class="card"><div class="card-body">
+<h3>Property Selling</h3>
+<p>Get the best price for your property with our strong market network and professional dealing.</p>
+</div></div>
+
+<div class="card"><div class="card-body">
+<h3>Investment Advice</h3>
+<p>We guide you with the right investment opportunities to maximize your returns in real estate.</p>
+</div></div>
+
+</div>
+</section>
+
+<!-- PROPERTIES -->
+<section id="properties">
+<h2 class="section-title">Featured Properties</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<div class="card-body">
+<h3>10 Marla Luxury House</h3>
+<p>Sector 21 Panchkula</p>
+<p class="price">₹1.2 Cr</p>
+<button class="btn" onclick="call()">Call Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c">
+<div class="card-body">
+<h3>8 Marla Modern Floor</h3>
+<p>Sector 11 Panchkula</p>
+<p class="price">₹85 Lac</p>
+<button class="btn" onclick="call()">Call Now</button>
+</div>
+</div>
+
+</div>
+</section>
+<section id="add-property">
+<h2 class="section-title">Add Property</h2>
+
+<div class="property-form">
+
+<select id="type" onchange="showType()">
+<option value="">Select Type</option>
+<option value="residential">Residential</option>
+<option value="commercial">Commercial</option>
+</select>
+
+<div id="residential-options" style="display:none;">
+<select id="resType" onchange="showResOptions()">
+<option value="">Select Property</option>
+<option value="house">Independent House</option>
+<option value="flat">Flat</option>
+<option value="floor">Floor</option>
+<option value="plot">Plot</option>
+</select>
+</div>
+
+<div id="dynamic-fields"></div>
+
+<button class="btn">Submit Property</button>
+
+</div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<div class="contact-container">
+
+<!-- LEFT SIDE -->
+<div class="contact-left">
+<h2>Contact Us</h2>
+<p>We are here to help you find the best property deals in Panchkula.</p>
+
+<p><strong>📞 Phone:</strong> 9915499933</p>
+<p><strong>💬 WhatsApp:</strong> 9915499933</p>
+<p><strong>📧 Email:</strong> kumarhemantraj@gmail.com</p>
+<p><strong>📍 Office:</strong> House No. 500, Sector 15, Panchkula, Haryana</p>
+
+<button class="btn" onclick="call()">Call Now</button>
+<button class="btn" onclick="whatsapp()">WhatsApp</button>
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="contact-right">
+<form onsubmit="sendToWhatsapp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+<textarea id="msg" placeholder="Your Message"></textarea>
+
+<button class="btn">Send on WhatsApp</button>
+</form>
+
+<!-- GOOGLE MAP -->
+<iframe 
+src="https://www.google.com/maps?q=House+No+500+Sector+15+Panchkula&output=embed"
+width="100%" height="250" style="border:0; margin-top:20px;" 
+allowfullscreen="" loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- COMPANY -->
+<div class="footer-col">
+<h2>Raj & Co</h2>
+<p>Your Trusted Property Dealer in Panchkula. We deal in Residential, Commercial & Investment Properties.</p>
+</div>
+
+<!-- SERVICES -->
+<div class="footer-col">
+<h3>Our Services</h3>
+<ul>
+<li>Residential Houses</li>
+<li>Residential Plots</li>
+<li>Commercial Properties</li>
+<li>SCO / Booth / Industrial</li>
+<li>Agricultural Land</li>
+</ul>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+
+<!-- CONTACT -->
+<div class="footer-col">
+<h3>Contact Info</h3>
+<p>📞 9915499933</p>
+<p>📧 kumarhemantraj@gmail.com</p>
+<p>📍 House No. 500, Sector 15, Panchkula</p>
+
+<div class="social">
+<a href="https://wa.me/919915499933">WhatsApp</a>
+<a href="tel:9915499933">Call</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- BOTTOM -->
+<div class="footer-bottom">
+<p>© 2026 Raj & Co Properties | All Rights Reserved</p>
+</div>
+
+</footer>
+
+<a href="https://wa.me/919915499933" class="whatsapp">💬</a>
+<a href="tel:9915499933" class="call-btn">📞</a>
+
+<script>
+
+function call(){window.location.href="tel:9915499933";}
+function whatsapp(){window.location.href="https://wa.me/919915499933";}
+
+function sendToWhatsapp(){
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let msg = document.getElementById("msg").value;
+
+let url = "https://wa.me/919915499933?text="
++ "Name: " + encodeURIComponent(name) + "%0a"
++ "Phone: " + encodeURIComponent(phone) + "%0a"
++ "Message: " + encodeURIComponent(msg);
+
+window.open(url, "_blank");
+}
+
+function showType(){
+let type = document.getElementById("type").value;
+document.getElementById("residential-options").style.display = 
+(type === "residential") ? "block" : "none";
+}
+
+function showResOptions(){
+let val = document.getElementById("resType").value;
+let box = document.getElementById("dynamic-fields");
+
+if(val === "house" || val === "flat" || val === "floor"){
+box.innerHTML = `
+
+<input type="text" placeholder="City (e.g. Panchkula)">
+<input type="text" placeholder="Sector (e.g. Sector 21)">
+<input type="text" placeholder="BHK (e.g. 3 BHK)">
+<input type="text" placeholder="Size (e.g. 150 sq yard)">
+<input type="text" placeholder="Price">
+
+<textarea placeholder="Description"></textarea>
+
+<input type="text" placeholder="Which Floor (for floor)">
+<select>
+<option>Lift Available?</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<input type="file">
+
+`;
+}
+
+else if(val === "plot"){
+box.innerHTML = `
+
+<input type="text" placeholder="City (e.g. Panchkula)">
+<input type="text" placeholder="Sector (e.g. Sector 20)">
+<input type="text" placeholder="Plot Size">
+<input type="text" placeholder="Road Width (ft)">
+
+<select>
+<option>Construction Done?</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<input type="text" placeholder="Price">
+<textarea placeholder="Description"></textarea>
+
+<input type="file">
+
+`;
+}
+
+else{
+box.innerHTML = "";
+}
+}
+
+
+
+</script>
+
+</body>
+</html>
